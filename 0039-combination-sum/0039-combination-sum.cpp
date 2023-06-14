@@ -2,14 +2,17 @@ class Solution {
 public:
   void   sam(int target , int i , vector<int> &c, vector<vector<int>> &ans,vector<int> &su,int n )
     {
-        
+         if(i==n)
+         {
         if(target == 0)
         {
             ans.push_back(su);
          
 }
+       return;
+         }
            if(target<0) return;
-      if(i==n) return;
+     
         su.push_back(c[i]);
         sam(target-c[i],i,c,ans,su,n);
             su.pop_back();
