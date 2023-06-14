@@ -22,13 +22,13 @@ public:
         vector<vector<int>> ans;
         vector<int> su;
         sam(target,0,candidates,ans,su,candidates.size());
-       map<vector<int>,int> mp;
-        for(auto i: ans)
-            mp[i]++;
-        vector<vector<int>> a;
-        for(auto i : mp)
-            a.push_back(i.first);
-        return a;
+       // map<vector<int>,int> mp;
+       //  for(auto i: ans)
+       //      mp[i]++;
+       //  vector<vector<int>> a;
+       //  for(auto i : mp)
+       //      a.push_back(i.first);
+        return ans;
             
         
     }
