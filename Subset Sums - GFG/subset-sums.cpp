@@ -5,16 +5,20 @@ using namespace std;
 // } Driver Code Ends
 class Solution
 {
+#include <vector>
+
+
 public:
     void ansa(std::vector<int>& arr, int n, int i, std::vector<int>& ans, int sum) {
         if (i == n) {
-         
             return;
         }
-        ansa(arr, n, i + 1, ans, sum); // Exclude current element
         sum += arr[i];
         ans.push_back(sum);
-        ansa(arr, n, i + 1, ans, sum); // Include current element
+        ansa(arr, n, i + 1, ans, sum);
+        sum -= arr[i];
+       
+        ansa(arr, n, i + 1, ans, sum);
     }
     
     std::vector<int> subsetSums(std::vector<int>& arr, int N) {
@@ -26,7 +30,6 @@ public:
         return ans;
     }
 };
-
 
 
 
