@@ -7,7 +7,7 @@ public:
             ans.push_back(subans);
             return;
         }
-        if(na == n+1) return;
+        if(na > n) return;
         
         bb(n , k , ans , na+1 ,subans);
         subans.push_back(na);
